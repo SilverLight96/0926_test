@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.17+commit.8df45f5f"
+		"version": "0.8.7+commit.e28d00a7"
 	},
 	"language": "Solidity",
 	"output": {
@@ -26,11 +26,6 @@
 						"internalType": "uint256",
 						"name": "_purchasePrice",
 						"type": "uint256"
-					},
-					{
-						"internalType": "address",
-						"name": "_currencyAddress",
-						"type": "address"
 					},
 					{
 						"internalType": "address",
@@ -106,19 +101,6 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "bid_amount",
-						"type": "uint256"
-					}
-				],
-				"name": "bid",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
 				"inputs": [],
 				"name": "buyer",
 				"outputs": [
@@ -143,19 +125,6 @@
 				"name": "cancelSales",
 				"outputs": [],
 				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "currencyAddress",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -186,19 +155,6 @@
 			},
 			{
 				"inputs": [],
-				"name": "getHighestBid",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
 				"name": "getSaleInfo",
 				"outputs": [
 					{
@@ -211,47 +167,6 @@
 						"name": "",
 						"type": "uint256"
 					},
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					},
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					},
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "highestBid",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "highestBidder",
-				"outputs": [
 					{
 						"internalType": "address",
 						"name": "",
@@ -335,9 +250,6 @@
 		"userdoc": {
 			"kind": "user",
 			"methods": {
-				"bid(uint256)": {
-					"notice": "구매희망자가 가격을 제시하는 함수 - 판매자가 아닌경우 호출가능 - 해당Sale의 판매시점이 유효한 경우 - 구매희망자가 Sale 컨트랙트에게 구매희망자의 ERC-20토큰을 송금할수 있는 권한을 허용한 경우(ERC-20 approve) - 판매자가 지정한 최저 제안가 이상의 금액 제시 - 현재 최고 제안가 초과 금액 제시 - 즉시 구매가보다 낮은 금액으로 호출 위 사항을 만족하는 경우 1. 최고 제안가와 제안자 정보를 갱신한다. 2. Sale 컨트랙트로 제안금액만큼의 ERC-20 토큰을 송금한다."
-				},
 				"cancelSales()": {
 					"notice": "판매 종료 시간 이전에 판매자나 관리자가 판매를 철회하는 함수 - 철회 시점이 유효한 경우 - 호출자가 판매자 혹은 관리자인 경우 위 사항을 만족하는 경우 1. 환불을 진행한다. 2. NFT소유권을 판매자에게 되돌려 준다. 3. 컨트랙트의 거래 상태를 업데이트 한다."
 				},
@@ -366,11 +278,11 @@
 	},
 	"sources": {
 		"contracts/NFTcreator.sol": {
-			"keccak256": "0x61e7841af696a1ade65885cd1a186596664b968a15986716242baa188f2b8790",
+			"keccak256": "0x9a3e3e3a865ad5d25ffcf44b13a864a8965c44e2c5846b625dafb27bb46a03b0",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://8b140e95f9f842c3dcb6fa3c373054390dce6b9e058301c41a1fe3be699bf98b",
-				"dweb:/ipfs/QmRR7SpjGGMjPQjsSmX76Nheq4YoXWudTTDJHaoj7kqVJP"
+				"bzz-raw://91027a43362961fd5aa3e1c4d372c5820ebb39e5046e14574727b204c897a8bc",
+				"dweb:/ipfs/QmdjVeb8WKk9q5DdjZA26FsYTDHag9Bcg1rp37sdmbdzKn"
 			]
 		},
 		"contracts/SSFToken.sol": {
@@ -382,11 +294,11 @@
 			]
 		},
 		"contracts/SaleFactory.sol": {
-			"keccak256": "0xfa9a80e5504e82f8f77df9fbb88db176af410d5afbf0bc73804b7be8db5a66cb",
+			"keccak256": "0x24a4e72e780160983fe50399a9e8d93e635e7fc9dd0afb0bcec0d0da4b8db643",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://5588ffa79af4f83aafcd39088ea225292168ad5f5218c148089f4dd3c00eac34",
-				"dweb:/ipfs/QmcWgMJuKS6v4iSU7GEtLTMGCdt5kigsZXRsZRSaG9VWUy"
+				"bzz-raw://0f13ade53b09b0d788ce858bc1832555557a9b68e312fa9820e569c3c45418a5",
+				"dweb:/ipfs/QmbVZ4MzGncVybw9zyLGYg5EyKTVyuk5z1hUaHE5CoKTyA"
 			]
 		},
 		"contracts/access/Ownable.sol": {

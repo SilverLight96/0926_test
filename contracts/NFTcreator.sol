@@ -30,6 +30,8 @@ contract NFTcreator is ERC721 {
     // tokenId를 매개변수로 호출하면 token를 반환하는 함수
     function tokenURI(uint256 tokenId) public view override returns (string memory) {
         return tokenURIs[tokenId];
+        //json파일을 가져오게 되면 opensea등에서 자동으로 데이터 분리하여 확인 가능
+        // return 'https://ipfs.io/ipfs/QmeEqonrGXZT4yRkWhg4FxcoyZUra3yQH3hd6JucWGMSNg/1/1.json';
     }
 
     // 해당 함수를 호출함으로써 호출자가 지정한 tokenURI를 새롭게 발행한다.
@@ -46,4 +48,9 @@ contract NFTcreator is ERC721 {
         emit createNFT(tokenId, to);
         return tokenId;
     }
+
+    //json파일을 받아 안에 있는 데이터들을 꺼낼 때
+    // function _minting(uint _tokenId) public{
+    //     _mint(msg.sender, _tokenId);
+    // }
 }

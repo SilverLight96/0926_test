@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.17+commit.8df45f5f"
+		"version": "0.8.7+commit.e28d00a7"
 	},
 	"language": "Solidity",
 	"output": {
@@ -113,11 +113,6 @@
 					},
 					{
 						"internalType": "address",
-						"name": "currencyAddress",
-						"type": "address"
-					},
-					{
-						"internalType": "address",
 						"name": "nftAddress",
 						"type": "address"
 					}
@@ -208,7 +203,7 @@
 		"devdoc": {
 			"kind": "dev",
 			"methods": {
-				"createSale(uint256,uint256,address,address)": {
+				"createSale(uint256,uint256,address)": {
 					"details": "반드시 구현해야하는 함수입니다. "
 				},
 				"owner()": {
@@ -247,11 +242,11 @@
 	},
 	"sources": {
 		"contracts/NFTcreator.sol": {
-			"keccak256": "0x61e7841af696a1ade65885cd1a186596664b968a15986716242baa188f2b8790",
+			"keccak256": "0x9a3e3e3a865ad5d25ffcf44b13a864a8965c44e2c5846b625dafb27bb46a03b0",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://8b140e95f9f842c3dcb6fa3c373054390dce6b9e058301c41a1fe3be699bf98b",
-				"dweb:/ipfs/QmRR7SpjGGMjPQjsSmX76Nheq4YoXWudTTDJHaoj7kqVJP"
+				"bzz-raw://91027a43362961fd5aa3e1c4d372c5820ebb39e5046e14574727b204c897a8bc",
+				"dweb:/ipfs/QmdjVeb8WKk9q5DdjZA26FsYTDHag9Bcg1rp37sdmbdzKn"
 			]
 		},
 		"contracts/SSFToken.sol": {
@@ -263,11 +258,11 @@
 			]
 		},
 		"contracts/SaleFactory.sol": {
-			"keccak256": "0xfa9a80e5504e82f8f77df9fbb88db176af410d5afbf0bc73804b7be8db5a66cb",
+			"keccak256": "0x24a4e72e780160983fe50399a9e8d93e635e7fc9dd0afb0bcec0d0da4b8db643",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://5588ffa79af4f83aafcd39088ea225292168ad5f5218c148089f4dd3c00eac34",
-				"dweb:/ipfs/QmcWgMJuKS6v4iSU7GEtLTMGCdt5kigsZXRsZRSaG9VWUy"
+				"bzz-raw://0f13ade53b09b0d788ce858bc1832555557a9b68e312fa9820e569c3c45418a5",
+				"dweb:/ipfs/QmbVZ4MzGncVybw9zyLGYg5EyKTVyuk5z1hUaHE5CoKTyA"
 			]
 		},
 		"contracts/access/Ownable.sol": {
